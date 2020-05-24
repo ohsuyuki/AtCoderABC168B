@@ -9,7 +9,20 @@
 #include <iostream>
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    int K = 0;
+    std::cin >> K;
+
+    std::string S = "";
+    std::cin >> S;
+
+    std::string ret = "";
+    if(S.length() <= K) {
+        ret = S;
+    } else {
+        ret = S.substr(0, K) + "...";
+    }
+
+    std::cout << ret;
+
     return 0;
 }
